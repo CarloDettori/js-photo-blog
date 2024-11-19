@@ -1,0 +1,10 @@
+body {
+    font-family: ;
+}
+
+.edu-tas-beginner-<uniquifier> {
+    font-family: "Edu TAS Beginner", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
