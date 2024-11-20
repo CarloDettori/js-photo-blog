@@ -29,9 +29,9 @@ let closeButton = document.getElementById("close-button");
 let polaroidOverlay = document.getElementById("zoom-image")
 let overlay = document.getElementById("overlay")
 
-polaroid.forEach(addEventListener("click", function (element) {
-    let ThisPolaroid = element.currentTarget;
-    //let ThisPolaroidImg = ThisPolaroid.getElementsByClassName("polaroid-img");
+polaroid.forEach(addEventListener("click", function (event) {
+    let ThisPolaroid = event.Target;
+    let ThisPolaroidImg = ThisPolaroid.queryselector(".polaroid-img");
     //polaroidOverlay.src = ThisPolaroidImg.src;
     overlay.classList.remove("d-none");
     console.log(ThisPolaroid)
