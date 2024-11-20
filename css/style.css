@@ -1,4 +1,5 @@
 /* reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,18 +10,14 @@ img {
     width: 100%;
 }
 
+
 /* tools */
 
 .debugz {
     border: 2px solid greenyellow;
 }
 
-
-
-
 /* assets */
-
-
 
 body {
     background-image: url("../img/cork.png");
@@ -47,8 +44,11 @@ header {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 3000;
     position: fixed;
-    width: 100%;
-    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
 }
 
 .container {
@@ -90,5 +90,28 @@ header {
 }
 
 .polaroid:hover #pin {
-    display: none
+    display: none;
+}
+
+#zoom-image {
+    display: flex;
+    width: calc(20vw + 200px);
+    margin: 10px auto auto;
+}
+
+button {
+    display: flex;
+    margin: 130px auto auto;
+    color: white;
+    background-color: rgb(107, 107, 57);
+    padding: 5px 15px;
+}
+
+button:hover {
+    background-color: rgba(132, 132, 45);
+    transform: scale(110%);
+}
+
+.d-none {
+    display: none;
 }
