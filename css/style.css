@@ -43,12 +43,12 @@ header {
     background-image: url("../img/wall.png");
 }
 
-
-.edu-tas-beginner-cursive {
-    font-family: "Edu TAS Beginner", cursive;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
+#overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
 }
 
 .container {
@@ -78,13 +78,15 @@ header {
     padding: 20px;
     margin: 40px 20px 0;
     box-shadow: 3px 3px 10px;
+    transition: all .1s
 }
 
 .polaroid:hover {
+    z-index: 2000;
     rotate: 5deg;
-    transform: scale(105%);
+    transform: scale(120%);
     box-shadow: 10px 10px 30px;
-    transition: all .1s
+
 }
 
 .polaroid:hover #pin {
