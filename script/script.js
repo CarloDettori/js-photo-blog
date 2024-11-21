@@ -7,8 +7,9 @@ axios
     .get("https://jsonplaceholder.typicode.com/photos?_limit=6")
     .then((ans) => {
         let deck = ""
+        console.log(ans.data)
         document.getElementById("zoom-image")
-        for (let i = 0; i <= 5; i++) {
+        for (let i = 0; i <= ans.data.length; i++) {
             deck += `
                 <div id="polaroid-${ans.data[i].id}" class="polaroid">
                     <img  id="pin" src="./img/pin.svg" alt="">
@@ -18,24 +19,22 @@ axios
             `;
         }
         polaroidBox.innerHTML = deck;
+        let polaroid = document.getElementsByClassName("polaroid")
 
+        let overlay = document.getElementById("overlay")
+        console.log(polaroid)
+        Array.from(polaroid).forEach((value) => {
+            value.addEventListener("click",)
+        })
     })
     .catch((error) => {
         console.log(error);
+
     })
 
-let polaroid = document.getElementsByClassName("polaroid")
+
 let closeButton = document.getElementById("close-button");
 let polaroidOverlay = document.getElementById("zoom-image")
-let overlay = document.getElementById("overlay")
-
-polaroid.forEach(addEventListener("click", function (event) {
-    let ThisPolaroid = event.Target;
-    let ThisPolaroidImg = ThisPolaroid.queryselector(".polaroid-img");
-    //polaroidOverlay.src = ThisPolaroidImg.src;
-    overlay.classList.remove("d-none");
-    console.log(ThisPolaroid)
-}))
 
 function hideOverlay() {
 
